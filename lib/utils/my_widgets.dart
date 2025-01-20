@@ -408,8 +408,8 @@ class DashBoardChooseCategory extends StatelessWidget {
 class PopularTourism extends StatelessWidget {
   PopularTourism({super.key});
 
-  final TourismDioController tourismDioController =
-      Get.put(TourismDioController());
+  final TourismPopularDioController tourismDioController =
+      Get.put(TourismPopularDioController());
   final MySearchController searchController = Get.put(MySearchController());
 
   @override
@@ -601,7 +601,7 @@ class BookingPageDetails extends StatelessWidget {
                                 : "Confirm",
                             onPressed: () => calendarController.dateText.value == ""
                                 ? calendarController.selectDateFromCalendar(context)
-                                : Get.to(()=>SuccessfulPage(
+                                : Get.offAll(()=>SuccessfulPage(
                               name: name,
                               price: price,
                               date: calendarController.dateText.value,
@@ -624,8 +624,8 @@ class BookingPageDetails extends StatelessWidget {
 class FavoriteSection extends StatelessWidget {
   FavoriteSection({super.key});
 
-  final TourismDioController tourismDioController =
-      Get.put(TourismDioController());
+  final TourismFavDioController tourismDioController =
+      Get.put(TourismFavDioController());
 
   final MyFavoriteController favController = Get.put(MyFavoriteController());
 

@@ -24,7 +24,7 @@ class UserDioController extends GetxController {
   }
 }
 
-class TourismDioController extends GetxController {
+class TourismFavDioController extends GetxController {
   final Dio dio = Dio();
 
   @override
@@ -42,7 +42,35 @@ class TourismDioController extends GetxController {
 
       // Make sure the response.data is a list and update the tourism list
       // tourism.value = List<Map<String, dynamic>>.from(response.data);
-      tourism.value = List<Map<String, dynamic>>.from(response.data).take(15).toList();
+      tourism.value = List<Map<String, dynamic>>.from(response.data).take(30).toList();
+
+      // print('\n\n\n${tourism.value.runtimeType}');
+      // print('Fetched Tourism data = \n${response.data}');
+    } catch (e) {
+      print('getTourism Error = $e');
+    }
+  }
+}
+
+class TourismPopularDioController extends GetxController {
+  final Dio dio = Dio();
+
+  @override
+  void onInit() {
+    super.onInit();
+    getTourism();
+  }
+
+  var tourism = <Map<String, dynamic>>[].obs;
+  Future<void> getTourism() async {
+    try {
+      // print("=============Fetching Tourism Data===========================================\n");
+
+      final response = await dio.get(MyConstants.fetchTourismUrl);
+
+      // Make sure the response.data is a list and update the tourism list
+      // tourism.value = List<Map<String, dynamic>>.from(response.data);
+      tourism.value = List<Map<String, dynamic>>.from(response.data).take(30).toList();
 
       // print('\n\n\n${tourism.value.runtimeType}');
       // print('Fetched Tourism data = \n${response.data}');
