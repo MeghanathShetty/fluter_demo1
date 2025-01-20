@@ -44029,7 +44029,7 @@ if(r.$2(a,j)>0){s[b]=j
 b=o}}s[b]=a}}
 A.Lb.prototype={
 J(a){var s=null
-return new A.yl(new A.Ot(s),"Flutter Demo",A.uJ(s,A.axG(B.au,s,s,B.Iz),"Urbanist",!0),s)}}
+return new A.yl(new A.Ot(s),"Travel Booking Demo",A.uJ(s,A.axG(B.au,s,s,B.Iz),"Urbanist",!0),s)}}
 A.wQ.prototype={
 J(a){var s=this,r=null,q=17976931348623157e292,p=A.dg(r,r,B.r,r,r,new A.cS(r,A.axY(B.fz,new A.mZ(s.f,1,r)),r,r,r,r,B.al),r,r,r,r,r,r,r),o=A.dg(r,r,B.r,A.ax(B.d.aA(127.5),B.l.gl(0)>>>16&255,B.l.gl(0)>>>8&255,B.l.gl(0)&255),r,r,r,r,r,r,r,r,r),n=$.bA(),m=t.Wo
 m=new A.zm(A.Ni(""),A.b([],t.EH),A.dj(r,r,r,t.X,t.xW),new A.dk(m),new A.dk(m),!1,!1)
