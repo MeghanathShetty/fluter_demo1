@@ -70,7 +70,7 @@ class TourismPopularDioController extends GetxController {
 
       // Make sure the response.data is a list and update the tourism list
       // tourism.value = List<Map<String, dynamic>>.from(response.data);
-      tourism.value = List<Map<String, dynamic>>.from(response.data).take(30).toList();
+      tourism.value = List<Map<String, dynamic>>.from(response.data);
 
       // print('\n\n\n${tourism.value.runtimeType}');
       // print('Fetched Tourism data = \n${response.data}');
