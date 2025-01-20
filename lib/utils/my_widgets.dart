@@ -447,7 +447,7 @@ class PopularTourism extends StatelessWidget {
               return Padding(
                   padding: const EdgeInsets.only(bottom: 15),
                   child: GestureDetector(
-                    onTap: () => Get.to(BookingPage(
+                    onTap: () => Get.to(()=>BookingPage(
                       name: item['name'],
                       url: item['image'],
                       price: price,
@@ -534,7 +534,7 @@ class BookingPageDetails extends StatelessWidget {
       required this.desc});
 
   final MyCalendarController calendarController =
-      Get.put(MyCalendarController());
+  Get.put(MyCalendarController());
 
   @override
   Widget build(BuildContext context) {
@@ -601,7 +601,7 @@ class BookingPageDetails extends StatelessWidget {
                                 : "Confirm",
                             onPressed: () => calendarController.dateText.value == ""
                                 ? calendarController.selectDateFromCalendar(context)
-                                : Get.to(SuccessfulPage(
+                                : Get.to(()=>SuccessfulPage(
                               name: name,
                               price: price,
                               date: calendarController.dateText.value,
@@ -669,7 +669,7 @@ class FavoriteSection extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10.0), // Add spacing
                 child: GestureDetector(
-                  onTap: () => Get.to(BookingPage(
+                  onTap: () => Get.to(()=>BookingPage(
                     name: item['name'],
                     url: item['image'],
                     price: price,

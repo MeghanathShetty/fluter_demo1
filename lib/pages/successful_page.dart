@@ -42,7 +42,7 @@ class SuccessfulPage extends StatelessWidget {
                 child: Align(alignment: Alignment.bottomCenter,child:
                 SizedBox(
                     width: screenWidth>600? 400 : 300,
-                    child: MyElevatedBtn(text: "Explore More", onPressed: ()=>Get.to(DashboardPage2())))
+                    child: MyElevatedBtn(text: "Explore More", onPressed: ()=>Get.offAll(()=>DashboardPage2())))
                 ),
               )
             ],

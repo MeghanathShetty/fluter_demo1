@@ -98,6 +98,12 @@ class MySearchController extends GetxController{
 
 class MyCalendarController extends GetxController{
   var dateText = "".obs;
+  @override
+  // void onInit() {
+  //   super.onInit();
+  //   dateText.value = ""; // Reset the date whenever the controller is initialized
+  //   print("Hello");
+  // }
 
   Future<void> selectDateFromCalendar(BuildContext context) async {
     DateTime? selectedDate = await showDatePicker(
