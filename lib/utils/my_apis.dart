@@ -41,7 +41,9 @@ class TourismDioController extends GetxController {
       final response = await dio.get(MyConstants.fetchTourismUrl);
 
       // Make sure the response.data is a list and update the tourism list
-      tourism.value = List<Map<String, dynamic>>.from(response.data);
+      // tourism.value = List<Map<String, dynamic>>.from(response.data);
+      tourism.value = List<Map<String, dynamic>>.from(response.data).take(15).toList();
+
       // print('\n\n\n${tourism.value.runtimeType}');
       // print('Fetched Tourism data = \n${response.data}');
     } catch (e) {
